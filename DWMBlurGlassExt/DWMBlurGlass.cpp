@@ -148,13 +148,13 @@ namespace MDWMBlurGlassExt
 		}
 
 		CustomButton::Detach();
-		OcclusionCulling::Detach();
-		TitleTextTweaker::Detach();
-		BlurRadiusTweaker::Detach();
-		AccentBlur::Detach();
-		CustomBackdrop::Detach();
-		DwmAPIEffect::Detach();
-		ScaleOptimizer::Detach();
+		// OcclusionCulling::Detach();
+		// TitleTextTweaker::Detach();
+		// BlurRadiusTweaker::Detach();
+		// AccentBlur::Detach();
+		// CustomBackdrop::Detach();
+		// DwmAPIEffect::Detach();
+		// ScaleOptimizer::Detach();
 
 		g_CTopLevelWindow_ValidateVisual_HookDispatcher.enable_hook_routine<4, false>();
 
@@ -184,12 +184,12 @@ namespace MDWMBlurGlassExt
 			auto path = Utils::GetCurrentDir() + L"\\data\\config.ini";
 			g_configData = ConfigData::LoadFromFile(path);
 		}
-		DwmAPIEffect::Refresh();
-		CustomBackdrop::Refresh();
-		AccentBlur::Refresh();
-		BlurRadiusTweaker::Refresh();
+		// DwmAPIEffect::Refresh();
+		// CustomBackdrop::Refresh();
+		// AccentBlur::Refresh();
+		// BlurRadiusTweaker::Refresh();
 		CustomButton::Refresh();
-		ScaleOptimizer::Refresh();
+		// ScaleOptimizer::Refresh();
 
 		if (g_configData.useAccentColor)
 			RefreshAccentColor(0);
